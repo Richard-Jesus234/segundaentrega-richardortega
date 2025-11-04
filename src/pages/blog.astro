@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroComponent from '../components/heroComponent.astro';
+import NoticiaComponent from '../components/blogComponent.astro';
+---
+
+<Layout includeFooter={true}>
+    <HeroComponent 
+        title="Blog" 
+        description="Últimas noticias y actualizaciones" 
+        image="/src/assets/img/fondo3.jpeg" 
+    />
+    <!-- Noticias -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <NoticiaComponent />
+    </main>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroComponent from '../components/heroComponent.astro';
+import FaqComponent from '../components/faqComponent.astro';
+import Image from '../components/image.astro';
+import { faqsNote } from '../data/faqs/faqNote';
+import TituloComponent from '../components/tituloComponents.astro';
+import SubtituloComponent from '../components/subtituloComponent.astro';
+import TextoComponent from '../components/textoComponent.astro';
+---
+<Layout includeFooter={true}>
+  <HeroComponent
+    title="Reparación de Notebook"
+    description="Reparamos donde otros fallan. Trae tu notebook, ya sea HP, Lenovo, Toshiba, Acer, Xiaomi, Gear, Chuwi, Hyundai, Huawei, Samsung o cualquier otro en desuso. Tu solución está aquí."
+    image="/src/assets/img/fondo5.jpg"
+  />
+
+      <!-- Servicios Principales de ratafix -->
+<section class="container mx-auto max-w-3xl px-4 py-12">
+  <TituloComponent text="Servicios Principales:" stilo="text-center"/>
+    <div>
+      <SubtituloComponent text="Upgrade de disco duro y RAM: " stilo=""/>
+        <TextoComponent text="Mejora el rendimiento de tu notebook con un upgrade de disco duro y RAM. ¡Haz que tu laptop corra más rápido y maneje aplicaciones más exigentes sin problemas!" stilo="mt-2 text-gray-600"/>
+      <SubtituloComponent text="Reparación de problemas de pantalla: " stilo=""/>
+        <TextoComponent text="¿Tu pantalla está dañada o muestra problemas de visualización? Nosotros podemos ayudarte a reparar cualquier problema relacionado con la pantalla de tu notebook para que puedas volver a trabajar o estudiar sin contratiempos." stilo="mt-2 text-gray-600"/>
+      <SubtituloComponent text="Reparación de problemas de teclado: " stilo=""/>
+        <TextoComponent text="¿Tienes teclas que no funcionan o se han desgastado con el tiempo? Nuestros técnicos expertos pueden reparar o reemplazar el teclado de tu notebook para que vuelva a funcionar como nuevo." stilo="mt-2 text-gray-600"/>
+      <SubtituloComponent text="Formateo y eliminación de virus/malware: " stilo=""/>
+        <TextoComponent text="Deja tu notebook como nuevo con nuestro servicio de formateo. Eliminamos cualquier virus o malware que pueda estar afectando el rendimiento de tu laptop y te aseguramos un sistema limpio y libre de amenazas." stilo="mt-2 text-gray-600"/>
+      <SubtituloComponent text="Baños Químicos: " stilo=""/>
+        <TextoComponent text="Ofrecemos servicios de limpieza profunda y baños químicos  para eliminar el polvo y la suciedad que pueden afectar el rendimiento de tu Notebook." stilo="mt-2 text-gray-600"/>
+      </div>
+    <Image src="/src/assets/img/notebook.png" alt="Reparación Notebook"  stilo="flex justify-center items-center w-64 h-64"/>
+</section>
+<!-- Preguntas frecuentes -->
+<hr class="border-teal-500">
+<div class="container mx-auto max-w-7xl px-4 py-16">
+  <div class="text-center mb-12">
+    <TituloComponent text="Preguntas Frecuentes" stilo="text-center"/>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {faqsNote.map(faq => (
+      <FaqComponent question={faq.question} answer={faq.answer} />
+    ))}
+  </div>
+</div>
+</Layout>

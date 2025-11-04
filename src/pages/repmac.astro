@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroComponent from '../components/heroComponent.astro';
+import FaqComponent from '../components/faqComponent.astro';
+import Image from '../components/image.astro';
+import { faqsMac } from '../data/faqs/faqMac';
+import TituloComponents from '../components/tituloComponents.astro';
+import SubtituloComponent from '../components/subtituloComponent.astro';
+import TextoComponent from '../components/textoComponent.astro';
+---
+<Layout includeFooter={true}>
+    <HeroComponent
+        title="Reparación de Mac"
+        description="Ofrecemos servicios de reparación y upgrade para MacBook, incluidos modelos Macbook Air, Macbook Pro y más. Restauramos su funcionamiento y mejoramos su rendimiento, ampliando memoria o actualizando componentes. Prolongamos la vida útil de tu equipo "
+        image="/src/assets/img/fondo4.jpg"
+    />
+    <section class="container mx-auto max-w-3xl px-4 py-12">
+    <TituloComponents text="Servicios Principales:" stilo="text-3xl font-bold text-center text-green-600 mb-10"/>
+    <div class="space-y-8">
+        <div>
+            <SubtituloComponent text="Upgrade de disco duro y RAM:" stilo=""/>
+              <TextoComponent text="Mejora el rendimiento y la capacidad de almacenamiento de tu Macbook Pro con discos SSD más rápidos y mayores capacidades de RAM." stilo=""/>
+            <SubtituloComponent text="Reparación de Pantalla:" stilo=""/>
+              <TextoComponent text="Solucionamos problemas de pantalla como píxeles muertos, pantallas rotas o con líneas, y problemas de retroiluminación." stilo=""/>
+            <SubtituloComponent text="Reparación de Teclado:" stilo=""/>
+              <TextoComponent text="¿Problemas con teclas pegajosas o que no funcionan? Nosotros lo solucionamos, incluyendo la sustitución de teclados completos si es necesario." stilo=""/>
+            <SubtituloComponent text="Formateo y reinstalación de sistema operativo:" stilo=""/>
+              <TextoComponent text="Desde problemas de batería hasta fallos en la placa base, nuestro equipo técnico está equipado para diagnosticar y reparar una amplia gama de problemas internos." stilo=""/>
+        </div>
+    </div>
+        <Image src="/src/assets/img/mac.png" alt="Reparación Notebook"  stilo="flex justify-center items-center w-120 h-70"/>
+    </section>
+<!-- Preguntas frecuentes -->
+<div class="container mx-auto max-w-7xl px-4 py-16">
+  <div class="text-center mb-12">
+    <TituloComponents text="Preguntas Frecuentes" stilo="text-4xl md:text-5xl font-bold text-gray-800"/>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {faqsMac.map((faq) => (
+      <FaqComponent {...faq} />
+    ))}
+  </div>
+</div>
+</Layout>

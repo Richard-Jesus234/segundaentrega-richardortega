@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroComponent from '../components/heroComponent.astro';
+import FaqComponent from '../components/faqComponent.astro';
+import Image from '../components/image.astro';
+import { faqsServTec } from '../data/faqs/faqServTec';
+import TituloComponents from '../components/tituloComponents.astro';
+import SubtituloComponent from '../components/subtituloComponent.astro';
+import TextoComponent from '../components/textoComponent.astro';
+---
+<Layout includeFooter={true}>
+    <HeroComponent
+        title="Servicios Técnicos"
+        description="Ofrecemos planes de mantenimiento para equipos informáticos destinados a empresas, pymes y microempresas. Aseguramos el óptimo rendimiento y prolongamos la vida útil de tus dispositivos, adaptándonos a las necesidades específicas."
+        image="/src/assets/img/fondo4.jpg"
+    />
+    <section class="container mx-auto max-w-3xl px-4 py-12">
+    <TituloComponents text="Nuestros servicios le ahorran tiempo" stilo='text-center'/>
+            <SubtituloComponent text="Reparación: " stilo=""/>
+              <TextoComponent text="-Diagnóstico y solución de problemas de hardware y software." stilo=""/>
+              <TextoComponent text="-Reparación de daños físicos, como pantallas rotas o teclados dañados." stilo=""/>
+            <SubtituloComponent text="Upgrades de hardware: " stilo=""/>
+              <TextoComponent text="-Disco duro: Aumenta la velocidad y capacidad de almacenamiento con SSDs de última generación." stilo=""/>
+              <TextoComponent text="-RAM: Mejora el rendimiento y la capacidad multitarea de tu equipo con módulos de RAM de alta velocidad." stilo=""/>
+              <TextoComponent text="-GPU: Actualización de la tarjeta gráfica para un rendimiento gráfico superior en tus juegos favoritos." stilo=""/>
+            <SubtituloComponent text="Optimización del sistema: " stilo=""/>
+              <TextoComponent text="-Configuración avanzada del sistema operativo para maximizar el rendimiento en juegos." stilo=""/>
+              <TextoComponent text="-Eliminación de software no deseado y optimización de arranque para tiempos de carga más rápidos." stilo=""/>
+            <SubtituloComponent text="Mantenimiento preventivo: " stilo=""/>
+              <TextoComponent text="-Limpieza interna de polvo y suciedad para evitar el sobrecalentamiento y el rendimiento reducido." stilo=""/>
+              <TextoComponent text="-Reemplazo de pasta térmica para garantizar una disipación de calor óptima y un rendimiento constante." stilo=""/>
+            <SubtituloComponent text="Formateo y reinstalación de sistema operativo: " stilo=""/>
+              <TextoComponent text="-Eliminación de virus y malware con reinstalación limpia de Windows o Linux." stilo=""/>
+              <TextoComponent text="-Respaldo y restauración de datos importantes para una experiencia sin preocupaciones." stilo=""/>
+        <Image src="/src/assets/img/pc.jpg" alt="Reparación Notebook"  stilo="flex justify-center items-center w-120 h-70"/>
+    </section>
+<!-- Preguntas frecuentes -->
+<hr class="border-teal-500">
+<div class="container mx-auto max-w-7xl px-4 py-16">
+  <div class="text-center mb-12">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Preguntas Frecuentes</h1>
+  </div>
+<!-- FAQ Component -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {faqsServTec.map(faq => (
+      <FaqComponent question={faq.question} answer={faq.answer} />
+    ))}
+  </div>
+</div>
+</Layout>

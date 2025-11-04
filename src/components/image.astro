@@ -1,0 +1,18 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  stilo?: string;
+}
+
+const { src, alt, stilo = "" } = Astro.props;
+---
+
+<div class={`overflow-hidden rounded-2xl shadow-md ${stilo}`}>
+  <img
+    src={src}
+    alt={alt}
+    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+    loading="lazy"
+  />
+</div>

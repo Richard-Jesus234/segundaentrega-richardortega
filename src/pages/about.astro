@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TituloComponents from '../components/tituloComponents.astro';
+import HeroComponent from '../components/heroComponent.astro';
+import Image from "../components/image.astro";
+import SubtituloComponent from "../components/subtituloComponent.astro";
+---
+
+<Layout includeFooter={true}>
+    <HeroComponent
+        title="Sobre Nosotros"
+        description="Conoce más sobre Ratafix."
+        image="/src/assets/img/fondo2.jpg"
+    />
+    <!-- Historia de ratafix -->
+<section class="max-w-7xl mx-auto px-6 py-12">
+    <TituloComponents text="Sobre nosotros!" stilo="text-center" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div>
+                <Image src="/src/assets/img/2.png" alt="Sobre Ratafix" stilo="w-full rounded-lg" />
+            </div>
+            <div class="space-y-4">
+                <SubtituloComponent text="Somos Ratafix, una empresa con más de 70 años de experiencia en el mercado, dedicados a brindar soluciones tecnológicas de calidad. Nuestro equipo de profesionales está altamente capacitado para resolver cualquier problema técnico." stilo=''/>
+                <SubtituloComponent text="En Ratafix nos caracterizamos por ofrecer un servicio rápido, eficiente y con precios accesibles y con la seguridad que su equipo esta en buenas manos. Ratafix nunca te defraudara ni te robara piezas." stilo="text-lg" />
+            </div>
+        </div>
+</section>
+</Layout>
