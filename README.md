@@ -27,18 +27,3 @@ Repositorio: [https://github.com/Richard-Jesus234/segundaentrega-richardortega.g
 
    npm run dev
 ---
-
-## Estructura del proyecto
-
-/
-├── public/                
-├── src/
-│   ├── assets/            
-│   ├── components/        
-│   ├── data/              
-│   ├── layouts/           
-│   ├── pages/              
-│   └── styles/             
-├── astro.config.mjs       
-├── package-lock.json                
-└── tsconfig.json           
