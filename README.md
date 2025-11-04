@@ -13,7 +13,7 @@ Repositorio: [https://github.com/Richard-Jesus234/segundaentrega-richardortega.g
 
 ---
 
-## 🚀 Instalación y uso  
+## Instalación y uso  
 1. Clona este repositorio:  
    ```bash
    git clone https://github.com/Richard-Jesus234/segundaentrega-richardortega.git
@@ -35,9 +35,9 @@ Repositorio: [https://github.com/Richard-Jesus234/segundaentrega-richardortega.g
 ├── src/
 │   ├── assets/            
 │   ├── components/        
-│   ├── data/
-│   ├── layouts/       
-│   ├── pages/         
+│   ├── data/              
+│   ├── layouts/           
+│   ├── pages/              
 │   └── styles/             
 ├── astro.config.mjs       
 ├── package-lock.json                
