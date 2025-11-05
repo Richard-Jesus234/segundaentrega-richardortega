@@ -13,7 +13,7 @@ Repositorio: [https://github.com/Richard-Jesus234/segundaentrega-richardortega.g
 
 ---
 
-## 🚀 Instalación y uso  
+## Instalación y uso  
 1. Clona este repositorio:  
    ```bash
    git clone https://github.com/Richard-Jesus234/segundaentrega-richardortega.git
@@ -28,17 +28,18 @@ Repositorio: [https://github.com/Richard-Jesus234/segundaentrega-richardortega.g
    npm run dev
 ---
 
-## Estructura del proyecto
+## Tailwind
 
-/
-├── public/                
-├── src/
-│   ├── assets/            
-│   ├── components/        
-│   ├── data/
-│   ├── layouts/       
-│   ├── pages/         
-│   └── styles/             
-├── astro.config.mjs       
-├── package-lock.json                
-└── tsconfig.json           
+para este trabajo se utilizo tailwind.
+
+https://tailwindcss.com/docs/installation/tailwind-cli
+
+hay que verificar que tailwind esta instalado
+
+node -v
+
+npm -v
+
+para que tailwind funcione bien
+
+"watch": "npx @tailwindcss/cli -i ./input/input.css -o ./public/assets/css/style.css --watch"

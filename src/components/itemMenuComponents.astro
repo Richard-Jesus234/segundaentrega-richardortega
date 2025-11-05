@@ -17,8 +17,7 @@ const isHorizontal = layout === 'horizontal';
 ]}>
   {items.map((item) => (
     item.children ? (
-      <div class:list={[{ 'relative group': isHorizontal }]}>
-        
+      <div class:list={[{ 'relative group': isHorizontal }]}> 
         <button class="px-3 py-2 rounded-md hover:bg-green-700 transition duration-300 flex items-center justify-between w-full">
           {item.name} <i class="fas fa-caret-down ml-1"></i>
         </button>

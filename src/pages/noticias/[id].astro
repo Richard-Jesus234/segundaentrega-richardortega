@@ -28,7 +28,7 @@ const { noticia } = Astro.props;
         <div class="mt-4 sm:mt-6 prose prose-sm sm:prose-base md:prose-lg max-w-none">
           <p class="text-base sm:text-lg">{noticia.descripcion}</p>
           
-          <!-- Contenido dinámico de la noticia desde el JSON -->
+          <!-- Contenido dinámico que toma los datos de mi json -->
           {noticia.contenido && noticia.contenido.map((parrafo) => (
             <p class="mt-3 sm:mt-4">{parrafo}</p>
           ))}

@@ -10,7 +10,7 @@ import { ItemMenuComponents } from "../data/itemMenu";
     <div class="flex items-center">
       <img src="/src/assets/img/logo.png" width="50" alt="Logo" />
     </div>
-    
+    <!-- toma los datos del itemMenu.ts  -->
     <ItemMenuComponent items={ItemMenuComponents} layout="horizontal" />
     
     <div class="md:hidden">
@@ -32,18 +32,16 @@ import { ItemMenuComponents } from "../data/itemMenu";
   </div>
 </header>
 
+<!-- script para el responsive -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Comprobamos que existan antes de añadir el evento
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', () => {
-        // Muestra/oculta el menú
         mobileMenu.classList.toggle('hidden');
         
-        // Actualiza ARIA para accesibilidad
         const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
         menuBtn.setAttribute('aria-expanded', String(!isExpanded));
       });
